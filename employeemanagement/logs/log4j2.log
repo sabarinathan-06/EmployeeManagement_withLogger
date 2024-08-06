@@ -1,0 +1,198 @@
+[INFO ] 2024-08-06 13:14:06.153 [MainController.main()] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[WARN ] 2024-08-06 13:14:06.403 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2024-08-06 13:14:06.856 [MainController.main()] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 13:14:07.122 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:07.137 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:07.137 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:07.137 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:07.137 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:07.356 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:07.449 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:14:07.481 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:14:07.496 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:07.496 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:07.496 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:07.496 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:07.512 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:07.559 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:07.559 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:14:07.574 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:14:07.606 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:07.606 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:07.606 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:07.606 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:07.606 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:07.653 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:07.668 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:14:07.684 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:14:07.699 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:07.699 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:07.699 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:07.699 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:07.699 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:07.762 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:07.762 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:14:07.778 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:14:07.809 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:07.809 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:07.809 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:07.809 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:07.809 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:07.856 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:07.856 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:14:07.871 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:14:07.887 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:07.887 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:07.887 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:07.887 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:07.887 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:07.934 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:07.949 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:14:07.949 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:14:07.965 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:07.965 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:07.965 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:07.965 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:07.965 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:08.012 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:08.012 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:14:08.028 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:14:08.043 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:08.043 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:08.043 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:08.043 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:08.043 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:08.090 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:08.090 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:14:08.106 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:14:08.106 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:14:08.121 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:14:08.121 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:14:08.121 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:14:08.121 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:14:08.153 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:14:08.168 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:23.846 [MainController.main()] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[WARN ] 2024-08-06 13:19:24.049 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2024-08-06 13:19:24.299 [MainController.main()] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 13:19:24.439 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:24.455 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:24.455 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:24.455 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:24.455 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:24.877 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:24.971 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:19:25.002 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:19:25.033 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:25.033 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:25.033 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:25.033 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:25.033 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:25.096 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:25.096 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:19:25.111 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:19:25.142 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:25.142 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:25.142 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:25.142 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:25.142 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:25.267 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:25.267 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:19:25.283 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:19:25.314 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:25.314 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:25.314 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:25.314 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:25.314 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:25.392 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:25.392 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:19:25.424 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:19:25.455 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:25.455 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:25.455 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:25.455 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:25.455 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:25.517 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:25.533 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:19:25.533 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:19:25.564 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:25.564 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:25.564 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:25.564 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:25.564 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:25.627 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:25.627 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:19:25.642 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:19:25.658 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:25.658 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:25.658 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:25.658 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:25.658 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:25.721 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:25.736 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:19:25.752 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:19:25.767 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:25.767 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:25.767 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:25.767 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:25.767 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:25.830 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:25.830 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[WARN ] 2024-08-06 13:19:25.846 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2024-08-06 13:19:25.861 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:19:25.861 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 13:19:25.861 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 13:19:25.861 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:19:25.877 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:19:25.924 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 13:19:25.940 [MainController.main()] pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 14:11:05.238 [MainController.main()] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[WARN ] 2024-08-06 14:11:05.879 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2024-08-06 14:11:06.567 [MainController.main()] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 14:11:06.880 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 14:11:06.897 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 14:11:06.897 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 14:11:06.897 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 14:11:06.918 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 14:11:07.663 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 14:11:09.953 [MainController.main()] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@51333478] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2024-08-06 14:37:54.242 [MainController.main()] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[WARN ] 2024-08-06 14:37:54.867 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2024-08-06 14:37:55.664 [MainController.main()] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 14:37:55.977 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 14:37:55.993 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 14:37:55.993 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 14:37:55.993 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 14:37:55.993 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 14:37:56.541 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 14:37:58.688 [MainController.main()] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@42d40840] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2024-08-06 14:39:56.195 [MainController.main()] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[WARN ] 2024-08-06 14:39:56.713 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2024-08-06 14:39:57.417 [MainController.main()] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 14:39:57.699 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 14:39:57.715 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 14:39:57.715 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 14:39:57.715 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 14:39:57.720 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 14:39:58.201 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 14:40:00.175 [MainController.main()] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@214b5a9b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2024-08-06 14:48:21.633 [MainController.main()] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[WARN ] 2024-08-06 14:48:21.978 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2024-08-06 14:48:22.589 [MainController.main()] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 14:48:23.027 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 14:48:23.042 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 14:48:23.042 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 14:48:23.042 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 14:48:23.049 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 14:48:23.860 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 14:48:26.550 [MainController.main()] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@744c4cc6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2024-08-06 15:10:39.848 [MainController.main()] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[WARN ] 2024-08-06 15:10:40.317 [MainController.main()] deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2024-08-06 15:10:41.194 [MainController.main()] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 15:10:41.525 [MainController.main()] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 15:10:41.541 [MainController.main()] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/employee_management_system]
+[INFO ] 2024-08-06 15:10:41.541 [MainController.main()] pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+[INFO ] 2024-08-06 15:10:41.541 [MainController.main()] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 15:10:41.557 [MainController.main()] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 15:10:42.058 [MainController.main()] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2024-08-06 15:10:43.943 [MainController.main()] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@52bcd894] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
