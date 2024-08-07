@@ -1,6 +1,5 @@
 package com.ideas2it.employee.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -8,23 +7,22 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.ideas2it.exception.EmployeeException;
-import com.ideas2it.model.Department;
 import com.ideas2it.model.Employee;
 import com.ideas2it.helper.HibernateConfiguration;
 
 /**
-* This class is responsible for managing the Employee entities in the database.
-* This class provides methods for performing CRUD (Create, Read, Update, Delete)
-* operations on Employee records.
-*
-* It utilizes Hibernate for database connectivity and operations.
-*
-* Author:
-* - Sabarinathan
-*/
+ * <p>
+ * This class is responsible for managing the Employee entities in the database.
+ * This class provides methods for performing CRUD (Create, Read, Update, Delete)
+ * operations on Employee records.
+ * It utilizes Hibernate for database connectivity and operations.
+ * </p>
+ * Author:
+ * - Sabarinathan
+ */
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
     public EmployeeDAOImpl() {
         this.sessionFactory = HibernateConfiguration.getSessionFactory();
@@ -49,9 +47,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     public Employee getEmployeeById(int id) throws EmployeeException {
         try (Session session = sessionFactory.openSession()) {
             Employee employee = session.get(Employee.class, id);
-            if (employee == null) {
-                return null;
-            }
             return employee;
         } catch (HibernateException e) {
             throw new EmployeeException("Error while getting Employee " + id, e);
