@@ -47,7 +47,7 @@ public class Employee {
     @Column(name = "is_present")
     private int isPresent;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
 

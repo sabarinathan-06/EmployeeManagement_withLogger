@@ -35,7 +35,7 @@ public class Department {
     @Column(name = "is_present")
     private int isPresent;
 
-    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
     private Set<Employee> employees;
 
     public Department(String departmentName) {

@@ -1,10 +1,7 @@
 package com.ideas2it.project.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.ideas2it.employee.service.EmployeeManagement;
-import com.ideas2it.employee.service.EmployeeServiceImplementation;
 import com.ideas2it.exception.EmployeeException;
 import com.ideas2it.model.Employee;
 import com.ideas2it.model.Project;
@@ -13,12 +10,11 @@ import com.ideas2it.project.dao.ProjectDAOImpl;
 
 /**
  * This class handle the all operation related to project based on user request.
- * @author 
- *     - Sabarinathan
+ *
+ * @author - Sabarinathan
  */
 public class ProjectServiceImpl implements ProjectService {
-    private ProjectDAO projectDAO = new ProjectDAOImpl(); 
-    private EmployeeManagement employeeManagement = new EmployeeServiceImplementation();
+    private final ProjectDAO projectDAO = new ProjectDAOImpl();
 
     public void addProject(Project project) throws EmployeeException {
         projectDAO.addProject(project);
@@ -40,27 +36,8 @@ public class ProjectServiceImpl implements ProjectService {
         return projectDAO.getProjectById(id);
     }
 
-    public Project getProjectByName(String name) throws EmployeeException {
-        return projectDAO.getProjectByName(name);
-    }
-
     public List<Project> getAllProjects() throws EmployeeException {
         return projectDAO.getAllProjects();
-    }
-
-    public List<Project> listProject() throws EmployeeException {
-        List<Project> activeProject = new ArrayList<>();
-        List<Project> allProject = projectDAO.getAllProjects();
-        for (Project project : allProject) {
-            if (project.getIsPresent() == 1) {
-                activeProject.add(project);
-            }
-        }
-        return activeProject;
-    }
-
-    public int employeeSize() throws EmployeeException, EmployeeException {
-        return employeeManagement.listEmployees().size();
     }
 
     public void removeProject(int id) throws EmployeeException {
@@ -68,11 +45,11 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     public void addEmployeeToProject(int employeeId, int projectId) throws EmployeeException {
-        projectDAO.addEmployeeToProject(employeeId,projectId);
+        projectDAO.addEmployeeToProject(employeeId, projectId);
     }
 
     public void removeEmployeeFromProject(int employeeId, int projectId) throws EmployeeException {
-        projectDAO.removeEmployeeFromProject(employeeId,projectId);
+        projectDAO.removeEmployeeFromProject(employeeId, projectId);
     }
 
     public List<Employee> retrieveEmployeesByProject(int projectId) throws EmployeeException {

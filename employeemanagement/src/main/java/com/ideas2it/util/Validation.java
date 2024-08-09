@@ -1,11 +1,9 @@
 package com.ideas2it.util;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 import java.util.Scanner;
 
 /**
@@ -16,26 +14,23 @@ public class Validation {
 
     /**
      * This method is used to display the employee.
-     * @param 
-     *    - accept the string value
+     *
+     * @param string - accept the string value
      */
-    public boolean stringValidation(String str) {
+    public boolean stringValidation(String string) {
         String regex = "^[a-zA-Z]+([ ][a-zA-Z]+)*$";
-        return Pattern.matches(regex, str);
+        return !Pattern.matches(regex, string);
     }
 
     /**
      * This method is used to validate the name.
      */
     public String nameValidation() {
-        String name = "";
-        while (true) {
+        String name;
+        do {
             System.out.println("Enter valid Name: ");
             name = scanner.nextLine();
-            if (stringValidation(name)) {
-                break;
-            }
-        }
+        } while (stringValidation(name));
         return name;
     }
 
@@ -43,21 +38,18 @@ public class Validation {
      * This method is used to validate the place.
      */
     public String placeValidation() {
-        String place = "";
-        while (true) {
+        String place;
+        do {
             System.out.println("Enter valid Place: ");
             place = scanner.nextLine();
-            if (stringValidation(place)) {
-                break;
-            }
-        }
+        } while (stringValidation(place));
         return place;
     }
 
     /**
      * This method is used to validate the experience.
-     * @param integer
-     *    - accepts expeience
+     *
+     * @param experience - accepts experience
      */
     public boolean experienceValidation(int experience) {
         return experience >= 0;
@@ -65,8 +57,8 @@ public class Validation {
 
     /**
      * This method is used to validate the Date of Birth.
-     * @param string
-     *    - accepts Date of Birth as a string
+     *
+     * @param dobString - accepts Date of Birth as a string
      */
     public LocalDate dateOfBirthValidation(String dobString) {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");

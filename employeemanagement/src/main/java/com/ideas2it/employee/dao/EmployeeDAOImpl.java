@@ -1,6 +1,7 @@
 package com.ideas2it.employee.dao;
 
 import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -32,7 +33,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.save(employee);
+            session.saveOrUpdate(employee);
             transaction.commit();
         } catch (HibernateException e) {
             System.out.println(e.getMessage());
@@ -46,8 +47,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
     public Employee getEmployeeById(int id) throws EmployeeException {
         try (Session session = sessionFactory.openSession()) {
-            Employee employee = session.get(Employee.class, id);
-            return employee;
+            return session.get(Employee.class, id);
         } catch (HibernateException e) {
             throw new EmployeeException("Error while getting Employee " + id, e);
         }
@@ -87,11 +87,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
     public List<Employee> retrieveEmployeesByDepartment(int id) throws EmployeeException {
         try (Session session = sessionFactory.openSession()) {
-            List<Employee> employees = session.createQuery("FROM Employee WHERE department.id " 
+            return session.createQuery("FROM Employee WHERE department.id "
                                               + "= :id AND isPresent = 1", Employee.class)
                                               .setParameter("id", id)
                                               .list();
-            return employees;
         } catch (HibernateException e) {
             throw new EmployeeException("Error while retrieving Employees by department", e);
         }

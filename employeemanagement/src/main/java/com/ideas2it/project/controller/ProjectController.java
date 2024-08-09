@@ -1,14 +1,14 @@
 package com.ideas2it.project.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.ideas2it.model.Employee;
-import com.ideas2it.employee.service.EmployeeManagement;
-import com.ideas2it.employee.service.EmployeeServiceImplementation;
+import com.ideas2it.employee.service.EmployeeService;
+import com.ideas2it.employee.service.EmployeeServiceImpl;
 import com.ideas2it.exception.EmployeeException;
 import com.ideas2it.model.Project;
 import com.ideas2it.project.service.ProjectService;
@@ -16,18 +16,18 @@ import com.ideas2it.project.service.ProjectServiceImpl;
 
 /**
  * This class handles all the operation related to project based on user request.
- * @author 
- *     - Sabarinathan
+ *
+ * @author - Sabarinathan
  */
 public class ProjectController {
-    private ProjectService projectService;
-    private EmployeeManagement employeeManagement;
+    private final ProjectService projectService;
+    private final EmployeeService employeeService;
     Scanner scanner = new Scanner(System.in);
     private static final Logger logger = LoggerFactory.getLogger(ProjectController.class);
 
     public ProjectController() {
         this.projectService = new ProjectServiceImpl();
-        this.employeeManagement = new EmployeeServiceImplementation();
+        this.employeeService = new EmployeeServiceImpl();
     }
 
     /**
@@ -51,7 +51,7 @@ public class ProjectController {
                 if (choice == 8) {
                     continueRunning = false;
                 }
-            } catch(NumberFormatException e) {
+            } catch (NumberFormatException e) {
                 logger.warn("Invalid input.Please enter a valid integer choice");
             }
         }
@@ -101,7 +101,7 @@ public class ProjectController {
             }
         } catch (EmployeeException e) {
             logger.error(e.getMessage());
-        } 
+        }
     }
 
     /**
@@ -111,13 +111,13 @@ public class ProjectController {
         System.out.println("Enter project details:");
         System.out.print("Enter Project name: ");
         String projectName = scanner.nextLine();
-        boolean ispresent = projectService.isValidProjectName(projectName);
-        if (ispresent) {
+        boolean isPresent = projectService.isValidProjectName(projectName);
+        if (isPresent) {
             logger.info("Project has already been presented.");
         } else {
             Project project = new Project(projectName);
             projectService.addProject(project);
-            logger.info("Project added successfully with tha name: ", projectName);
+            logger.info("Project added successfully with tha name: {}", projectName);
         }
         System.out.println("-------------------------------");
     }
@@ -132,7 +132,7 @@ public class ProjectController {
         System.out.print("Enter new name: ");
         String newName = scanner.nextLine();
         projectService.updateProject(projectId, newName);
-        logger.info("Project updated successfully for the ID: ", projectId);
+        logger.info("Project updated successfully for the ID: {}", projectId);
         System.out.println("-------------------------------");
     }
 
@@ -143,19 +143,19 @@ public class ProjectController {
         System.out.println("Enter project ID to remove:");
         int projectId = scanner.nextInt();
         projectService.removeProject(projectId);
-        logger.info("Project removed successfully with the ID: ", projectId);
+        logger.info("Project removed successfully with the ID: {}", projectId);
         System.out.println("-------------------------------");
     }
 
     /**
-     * This method is used to display the availabe projects in a table format.
+     * This method is used to display the available projects in a table format.
      */
     public void displayProjects() throws EmployeeException {
         List<Project> availableProjects = projectService.getAllProjects();
         System.out.println("--------------------------------");
         System.out.printf("| %-5s | %-20s |\n", "Id", "Name");
         for (Project project : availableProjects) {
-            System.out.printf("| %-5s | %-20s |\n", project.getProjectId(), project.getProjectName()); 
+            System.out.printf("| %-5s | %-20s |\n", project.getProjectId(), project.getProjectName());
         }
         System.out.println("--------------------------------");
     }
@@ -167,17 +167,18 @@ public class ProjectController {
         displayProjects();
         System.out.println("Enter Project Id to list: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         List<Employee> projects = projectService.retrieveEmployeesByProject(id);
         Project project = projectService.getProjectById(id);
-        if (projects.size() != 0) {
+        if (!projects.isEmpty()) {
             System.out.println("Project Name = " + project.getProjectName());
             System.out.println("Assigned Employees:");
             System.out.println("--------------------------------");
             System.out.printf("| %-5s | %-20s |\n", "Id", "Name");
             for (Employee employee : projects) {
-                System.out.printf("| %-5s | %-20s |\n", employee.getId(), employee.getName());            
+                System.out.printf("| %-5s | %-20s |\n", employee.getId(), employee.getName());
             }
-        System.out.println("--------------------------------");
+            System.out.println("--------------------------------");
         } else {
             logger.error("Project not found.");
         }
@@ -193,11 +194,11 @@ public class ProjectController {
         Project project = projectService.getProjectById(projectId);
         System.out.println("Enter Employee ID: ");
         int employeeId = scanner.nextInt();
-        Employee employee = employeeManagement.getEmployeeById(employeeId);
+        scanner.nextLine();
+        Employee employee = employeeService.getEmployeeById(employeeId);
         if (project != null && employee != null) {
             projectService.addEmployeeToProject(employeeId, projectId);
-            logger.info("Employee added to project successfully for the project ID: " + projectId 
-                        + "and for the employee ID: " + employeeId);
+            logger.info("Employee added to project successfully for the project ID: {}and for the employee ID: {}", projectId, employeeId);
         } else {
             logger.error("Project or Employee not found.");
         }
@@ -213,13 +214,12 @@ public class ProjectController {
         Project project = projectService.getProjectById(projectId);
         System.out.println("Enter Employee ID: ");
         int employeeId = scanner.nextInt();
-        Employee employee = employeeManagement.getEmployeeById(employeeId);
+        Employee employee = employeeService.getEmployeeById(employeeId);
         if (project != null && employee != null) {
             projectService.removeEmployeeFromProject(employeeId, projectId);
-            logger.info("Employee removed from project successfully with the project ID: " + projectId 
-                        + "and for the employee ID: " + employeeId);
+            logger.info("Employee removed from project successfully with the project ID: {}and for the employee ID: {}", projectId, employeeId);
         } else {
-            logger.error("Project or Employee not found.");
+            logger.error("Project or Employee not found to remove employee from project.");
         }
     }
 }

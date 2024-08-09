@@ -1,6 +1,7 @@
 package com.ideas2it.project.dao;
 
 import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,21 +14,20 @@ import com.ideas2it.model.Employee;
 import com.ideas2it.model.Project;
 
 /**
-* This class provides methods to perform CRUD operations on the Project database table.
-* This class interacts with the database to add, retrieve, update, and delete project records.
-*
-* It holds a singleton pattern for managing the database connection and ensures that it is
-* a single instance of the database connection is used throughout the application.
-*
-* The class implements ProjectDAO Interface, providing a standardized interface for database
-* operations related to projects.
-*
-* Author:
-* - Sabarinathan
-*/
+ * <p>
+ * This class provides methods to perform CRUD operations on the Project database table.
+ * This class interacts with the database to add, retrieve, update, and delete project records.
+ * It holds a singleton pattern for managing the database connection and ensures that it is
+ * a single instance of the database connection is used throughout the application.
+ * The class implements ProjectDAO Interface, providing a standardized interface for database
+ * operations related to projects.
+ * </P>
+ * Author:
+ * - Sabarinathan
+ */
 public class ProjectDAOImpl implements ProjectDAO {
 
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
     public ProjectDAOImpl() {
         this.sessionFactory = HibernateConfiguration.getSessionFactory();
@@ -41,12 +41,11 @@ public class ProjectDAOImpl implements ProjectDAO {
             session.save(project);
             transaction.commit();
         } catch (HibernateException e) {
-            e.printStackTrace();
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw new EmployeeException("Issue while creating project " 
-                                        + project.getProjectName(), e);
+            throw new EmployeeException("Issue while creating project "
+                    + project.getProjectName(), e);
         }
     }
 
@@ -55,16 +54,16 @@ public class ProjectDAOImpl implements ProjectDAO {
         try (Session session = sessionFactory.openSession()) {
             return session.get(Project.class, id);
         } catch (HibernateException e) {
-            throw new EmployeeException("Issue while retrieving the project: " 
-                                        + e.getMessage(), e);
+            throw new EmployeeException("Issue while retrieving the project: "
+                    + e.getMessage(), e);
         }
     }
 
     @Override
     public Project getProjectByName(String name) throws EmployeeException {
         try (Session session = sessionFactory.openSession()) {
-            Query<Project> query = session.createQuery("FROM Project WHERE projectName = :name " 
-                                                       + "AND isPresent = 1", Project.class);
+            Query<Project> query = session.createQuery("FROM Project WHERE projectName = :name "
+                    + "AND isPresent = 1", Project.class);
             query.setParameter("name", name);
             Project project = query.uniqueResult();
             if (project != null && !isValidProjectName(project.getProjectName())) {
@@ -72,8 +71,8 @@ public class ProjectDAOImpl implements ProjectDAO {
             }
             return project;
         } catch (HibernateException e) {
-            throw new EmployeeException("Issue while retrieving the project by name: " 
-                                   + e.getMessage(), e);
+            throw new EmployeeException("Issue while retrieving the project by name: "
+                    + e.getMessage(), e);
         }
     }
 
@@ -81,8 +80,8 @@ public class ProjectDAOImpl implements ProjectDAO {
     public boolean isValidProjectName(String projectName) throws EmployeeException {
         try (Session session = sessionFactory.openSession()) {
             Query<Long> query = session.createQuery("SELECT COUNT(*) FROM Project "
-                                                    + "WHERE projectName = :projectName",
-                                                    Long.class);
+                            + "WHERE projectName = :projectName",
+                    Long.class);
             query.setParameter("projectName", projectName);
             Long count = query.uniqueResult();
             return count > 0;
@@ -106,8 +105,8 @@ public class ProjectDAOImpl implements ProjectDAO {
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw new EmployeeException("Issue while updating project " 
-                                        + project.getProjectName(), e);
+            throw new EmployeeException("Issue while updating project "
+                    + project.getProjectName(), e);
         }
     }
 
@@ -115,11 +114,11 @@ public class ProjectDAOImpl implements ProjectDAO {
     public List<Project> getAllProjects() throws EmployeeException {
         try (Session session = sessionFactory.openSession()) {
             Query<Project> query = session.createQuery("FROM Project WHERE isPresent = 1",
-                                                       Project.class);
+                    Project.class);
             return query.list();
         } catch (HibernateException e) {
-            throw new EmployeeException("Issue while retrieving the projects: " 
-                                        + e.getMessage(), e);
+            throw new EmployeeException("Issue while retrieving the projects: "
+                    + e.getMessage(), e);
         }
     }
 
@@ -138,8 +137,8 @@ public class ProjectDAOImpl implements ProjectDAO {
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw new EmployeeException("Issue while deleting project with id " + id + ": " 
-                                   + e.getMessage(), e);
+            throw new EmployeeException("Issue while deleting project with id " + id + ": "
+                    + e.getMessage(), e);
         }
     }
 
@@ -159,8 +158,8 @@ public class ProjectDAOImpl implements ProjectDAO {
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw new EmployeeException("Error assigning employee to project: " 
-                                        + e.getMessage(), e);
+            throw new EmployeeException("Error assigning employee to project: "
+                    + e.getMessage(), e);
         }
     }
 
@@ -180,8 +179,8 @@ public class ProjectDAOImpl implements ProjectDAO {
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw new EmployeeException("Error in removing employee from project: " 
-                                        + e.getMessage() + " Employee ID = " + employeeId, e);
+            throw new EmployeeException("Error in removing employee from project: "
+                    + e.getMessage() + " Employee ID = " + employeeId, e);
         }
     }
 
@@ -189,14 +188,13 @@ public class ProjectDAOImpl implements ProjectDAO {
     public List<Employee> retrieveEmployeesByProject(int projectId) throws EmployeeException {
         try (Session session = sessionFactory.openSession()) {
             Query<Employee> query = session.createQuery("SELECT e FROM Employee e "
-                                                        + "JOIN e.projects p "
-                                                        + "WHERE p.id = :projectId", 
-                                                        Employee.class);
+                            + "JOIN e.projects p WHERE p.id = :projectId",
+                    Employee.class);
             query.setParameter("projectId", projectId);
             return query.list();
         } catch (HibernateException e) {
-            throw new EmployeeException("Error in retrieve employees by project: " + e.getMessage() 
-                                   + " Project ID = " + projectId, e);
+            throw new EmployeeException("Error in retrieve employees by project: " + e.getMessage()
+                    + " Project ID = " + projectId, e);
         }
     }
 }

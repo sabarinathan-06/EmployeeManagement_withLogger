@@ -5,12 +5,12 @@ import com.ideas2it.employee.controller.EmployeeController;
 import com.ideas2it.project.controller.ProjectController;
 
 /**
- * This class get user request operation to thier respective controllers.
+ * This class get user request operation to their respective controllers.
  */
 public class MainController {
-    private EmployeeController employeeController;
-    private DepartmentController departmentController;
-    private ProjectController projectController;
+    private final EmployeeController employeeController;
+    private final DepartmentController departmentController;
+    private final ProjectController projectController;
     Scanner scanner = new Scanner(System.in);
 
     public MainController() {
@@ -19,9 +19,9 @@ public class MainController {
         this.projectController = new ProjectController();
     }
 
-/**
- * This method is used to display the choices fo the user.
- */
+    /**
+     * This method is used to display the choices fo the user.
+     */
     public void listOperation() {
         boolean continueRunning = true;
         while (continueRunning) {
@@ -37,15 +37,15 @@ public class MainController {
                 if (choice == 4) {
                     continueRunning = false;
                 }
-            } catch(NumberFormatException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid input.Please enter a valid integer choice");
             }
         }
     }
 
-/**
- * This method is used to select the operation based on user request.
- */
+    /**
+     * This method is used to select the operation based on user request.
+     */
     public void showMenu(int choice) {
         switch (choice) {
             case 1:
@@ -70,8 +70,8 @@ public class MainController {
     }
 
     /**
-     * This main method is used to handle all operation related to employee, 
-department and project based on user request.
+     * This main method is used to handle all operation related to employee,
+     * department and project based on user request.
      */
     public static void main(String[] args) {
         MainController mainController = new MainController();

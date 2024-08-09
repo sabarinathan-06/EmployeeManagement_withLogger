@@ -1,48 +1,50 @@
 package com.ideas2it.department.dao;
 
-import java.util.ArrayList;
 import java.util.List;
+
 import org.hibernate.HibernateException;
-import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import com.ideas2it.employee.controller.EmployeeController;
 import com.ideas2it.exception.EmployeeException;
-import com.ideas2it.model.Department;
 import com.ideas2it.helper.HibernateConfiguration;
+import com.ideas2it.model.Department;
 
 /**
-* This class is responsible for managing the Department entities in the database. 
-This class provides methods for performing CRUD (Create, Read, Update, Delete) 
-*
-* It utilizes JDBC for database connectivity and operations.
-*
-* It holds a singleton pattern for managing the database connection and ensures that it is
-a single instance of the database connection is used throughout the application.
-*
-* Author:
-* - Sabarinathan
-*/
+ * <p>
+ * This class is responsible for managing the Department entities in the database.
+ * This class provides methods for performing CRUD (Create, Read, Update, Delete)
+ * It utilizes JDBC for database connectivity and operations.
+ * It holds a singleton pattern for managing the database connection and ensures that it is
+ * a single instance of the database connection is used throughout the application.
+ * </p>
+ * Author:
+ * - Sabarinathan
+ */
 public class DepartmentDAOImpl implements DepartmentDAO {
 
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
+    private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
     public DepartmentDAOImpl() {
         this.sessionFactory = HibernateConfiguration.getSessionFactory();
     }
+
     public void addDepartment(Department department) throws EmployeeException {
-        System.out.println(sessionFactory);
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
             session.save(department);
             transaction.commit();
         } catch (HibernateException e) {
-            e.printStackTrace();
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Error while adding department {}", department.getDepartmentName());
             throw new EmployeeException("Error while adding department " + department.getDepartmentName(), e);
         }
     }
@@ -51,6 +53,7 @@ public class DepartmentDAOImpl implements DepartmentDAO {
         try (Session session = sessionFactory.openSession()) {
             return session.get(Department.class, id);
         } catch (HibernateException e) {
+            logger.error("Error while getting department using ID: {}", id);
             throw new EmployeeException("Error while getting department " + id, e);
         }
     }
@@ -61,6 +64,7 @@ public class DepartmentDAOImpl implements DepartmentDAO {
                     .setParameter("name", name)
                     .uniqueResult();
         } catch (HibernateException e) {
+            logger.error("Error while getting department using Name: {}", name);
             throw new EmployeeException("Error while getting department " + name, e);
         }
     }
@@ -75,6 +79,7 @@ public class DepartmentDAOImpl implements DepartmentDAO {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Error while updating Department for the ID: {}", department.getDepartmentId());
             throw new EmployeeException("Error while updating Department " + department.getDepartmentId(), e);
         }
     }
@@ -84,15 +89,18 @@ public class DepartmentDAOImpl implements DepartmentDAO {
         try (Session session = sessionFactory.openSession()) {
             Department department = session.get(Department.class, id);
             if (department != null) {
-                transaction = session.beginTransaction(); 
+                transaction = session.beginTransaction();
                 department.setIsPresent(0);
                 session.update(department);
             }
-            transaction.commit();
+            if (transaction != null) {
+                transaction.commit();
+            }
         } catch (HibernateException e) {
             if (transaction != null) {
                 transaction.rollback();
             }
+            logger.error("Error while removing Department {}", id);
             throw new EmployeeException("Error while removing Department " + id, e);
         }
     }
@@ -101,24 +109,8 @@ public class DepartmentDAOImpl implements DepartmentDAO {
         try (Session session = sessionFactory.openSession()) {
             return session.createQuery("FROM Department WHERE isPresent = 1", Department.class).getResultList();
         } catch (HibernateException e) {
+            logger.error("Error while retrieving departments");
             throw new EmployeeException("Error while retrieving departments", e);
         }
-    }
-
-    public int getDepartmentSize() throws EmployeeException {
-        int size = 0;
-        Transaction transaction = null;
-        try (Session session = sessionFactory.openSession()) {
-            transaction = session.beginTransaction();
-            Query<Long> query = session.createQuery("select count(d.id) from department d", Long.class);
-            size =query.uniqueResult().intValue();
-            transaction.commit();
-        } catch (HibernateException e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-            throw new EmployeeException("Error while retrieving department size", e);
-        }
-        return size;
     }
 }

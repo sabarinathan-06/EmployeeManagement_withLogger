@@ -14,9 +14,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-import com.ideas2it.model.Employee;
-
-
 /**
  * This class contains project details.
  */
@@ -35,7 +32,7 @@ public class Project {
     @Column(name = "is_present")
     private int isPresent;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
         name = "employee_project",
         joinColumns = { @JoinColumn(name = "project_id") },
@@ -46,7 +43,7 @@ public class Project {
     public Project(String projectName) {
         this.projectName = projectName;
         this.isPresent = 1;
-        this.employees = new HashSet<Employee>();
+        this.employees = new HashSet<>();
     }
    
     public Project() {
@@ -74,10 +71,6 @@ public class Project {
 
     public void setIsPresent(int isPresent) {
         this.isPresent = isPresent;
-    }
-
-    public void setProjectId(int ProjectId) {
-        this.projectId = ProjectId;
     }
 
     public void setEmployees(Set<Employee> employees) {

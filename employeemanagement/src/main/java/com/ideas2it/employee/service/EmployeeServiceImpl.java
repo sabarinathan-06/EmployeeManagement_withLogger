@@ -3,7 +3,7 @@ package com.ideas2it.employee.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ideas2it.department.service.DepartmentManagement;
+import com.ideas2it.department.service.DepartmentService;
 import com.ideas2it.department.service.DepartmentServiceImpl;
 import com.ideas2it.model.Department;
 import com.ideas2it.model.Employee;
@@ -19,9 +19,9 @@ import com.ideas2it.exception.EmployeeException;
  * Author:
  * - Sabarinathan
  */
-public class EmployeeServiceImpl implements EmployeeManagement {
+public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeDAO employeeDAO = new EmployeeDAOImpl();
-    private final DepartmentManagement departmentManagement = new DepartmentServiceImpl();
+    private final DepartmentService departmentService = new DepartmentServiceImpl();
 
     public void createEmployee(Employee employee) throws EmployeeException {
         employeeDAO.addOrUpdateEmployee(employee);
@@ -43,10 +43,6 @@ public class EmployeeServiceImpl implements EmployeeManagement {
         return employeeDAO.getEmployeeById(id);
     }
 
-    public List<Employee> getAllEmployees() throws EmployeeException {
-        return employeeDAO.getAllEmployees();
-    }
-
     public void updateEmployee(int id, String name, String place, String dob,
                                int experience, String departmentName) throws EmployeeException {
         Employee employee = employeeDAO.getEmployeeById(id);
@@ -65,7 +61,7 @@ public class EmployeeServiceImpl implements EmployeeManagement {
                 employee.setSalary(setSalary(experience));
             }
             if (departmentName != null && !departmentName.isEmpty()) {
-                Department department = departmentManagement.getDepartmentByName(departmentName);
+                Department department = departmentService.getDepartmentByName(departmentName);
                 if (department != null) {
                     employee.setDepartment(department);
                 }
