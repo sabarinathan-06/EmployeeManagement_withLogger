@@ -9,19 +9,19 @@ import com.ideas2it.model.Department;
 import com.ideas2it.model.Employee;
 import com.ideas2it.employee.dao.EmployeeDAO;
 import com.ideas2it.employee.dao.EmployeeDAOImpl;
-import com.ideas2it.employee.service.EmployeeManagement;
 import com.ideas2it.exception.EmployeeException;
 
 /**
- * This class is responsible for maintaining Employee details by 
-doing Employee related operations.
- *
+ * <p>
+ * This class is responsible for maintaining Employee details by
+ * doing Employee related operations.
+ * </p>
  * Author:
  * - Sabarinathan
  */
-public class EmployeeServiceImplementation implements EmployeeManagement {
-    private EmployeeDAO employeeDAO = new EmployeeDAOImpl();
-    private DepartmentManagement departmentManagement = new DepartmentServiceImpl();
+public class EmployeeServiceImpl implements EmployeeManagement {
+    private final EmployeeDAO employeeDAO = new EmployeeDAOImpl();
+    private final DepartmentManagement departmentManagement = new DepartmentServiceImpl();
 
     public void createEmployee(Employee employee) throws EmployeeException {
         employeeDAO.addOrUpdateEmployee(employee);
@@ -47,7 +47,7 @@ public class EmployeeServiceImplementation implements EmployeeManagement {
         return employeeDAO.getAllEmployees();
     }
 
-    public void updateEmployee(int id, String name, String place, String dob, 
+    public void updateEmployee(int id, String name, String place, String dob,
                                int experience, String departmentName) throws EmployeeException {
         Employee employee = employeeDAO.getEmployeeById(id);
         if (employee != null) {
@@ -74,31 +74,18 @@ public class EmployeeServiceImplementation implements EmployeeManagement {
         }
     }
 
-    public int getNextId() throws EmployeeException {
-        return employeeDAO.getAllEmployees().size() + 1;
-    }
-
     public boolean removeEmployee(int id) throws EmployeeException {
         return employeeDAO.removeEmployee(id);
     }
 
-    public List<Department> getAllDepartments() throws EmployeeException {
-        return departmentManagement.getAllDepartments();
-    }
-
-    public Department getDepartmentById(int id) throws EmployeeException {
-        return departmentManagement.getDepartmentById(id);
-    }
-
-    public List<Employee> retieriveEmployeesByDepartment(int id) throws EmployeeException {
+    public List<Employee> retrieveEmployeesByDepartment(int id) throws EmployeeException {
         return employeeDAO.retrieveEmployeesByDepartment(id);
     }
 
     public double setSalary(int experience) {
-        double salary = 0;
-        if (experience >= 0 && experience <= 3) {
-            salary = 520000;
-        } else if (experience > 3 && experience <= 5) {
+        double salary;
+        if (experience >= 0 && experience <= 3) salary = 520000;
+        else if (experience > 3 && experience <= 5) {
             salary = 800000;
         } else if (experience > 5 && experience <= 8) {
             salary = 1200000;
