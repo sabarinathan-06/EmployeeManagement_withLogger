@@ -38,7 +38,7 @@ public class MainController {
                     continueRunning = false;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input.Please enter a valid integer choice");
+                System.out.println("Invalid input.Please enter a correct integer choice");
             }
         }
     }
